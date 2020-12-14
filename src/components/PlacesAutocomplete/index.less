@@ -1,0 +1,32 @@
+.dropdown {
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  padding: 10px;
+  position: absolute;
+  top: 60px;
+  width: 93%;
+  z-index: 100;
+  &:empty {
+    display: none;
+  }
+}
+
+.customClearSvg {
+  position: absolute;
+  right: 10px;
+  top: 51%;
+  transform: translate(-50%, -50%);
+}
+
+.customPlacesAutocomplete {
+  position: relative;
+  width: 100%;
+  :global {
+    .dropdown___-SrnK {
+      width: 100% !important;
+    }
+    input {
+      height: 40px !important;
+    }
+  }
+}

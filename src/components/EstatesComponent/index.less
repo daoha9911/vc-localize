@@ -1,0 +1,102 @@
+.customSwiper {
+  :global(.swiper-pagination-bullet-active) {
+    background: #727c7d !important;
+  }
+  :global(.swiper-pagination-bullet) {
+    background: #fcfcfc;
+    opacity: 1;
+  }
+  border-radius: 4px;
+}
+
+.customInto {
+  top: 8px;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 8px;
+  .introDay {
+    padding: 2px 4px;
+    background: #fff;
+    border-radius: 4px;
+    span {
+      font-family: OpenSans-Regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #002c34;
+    }
+  }
+  .customInto_favor {
+    svg {
+      path {
+        fill: red;
+      }
+    }
+  }
+}
+
+.customSwiperSlide {
+  width: 100% !important;
+}
+
+.customImageSlide {
+  width: 100% !important;
+  height: 164px;
+  max-height: 164px;
+  object-fit: cover;
+}
+
+.spanPrice {
+  color: #ed411c;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  line-height: 22px;
+}
+
+.spanDescription {
+  margin-right: 4px;
+  color: #002c34;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.spanAdress {
+  color: #002c34;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.spanComparePrice {
+  color: #727c7d;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.activeCompare {
+  svg {
+    fill: #00aeac !important;
+  }
+  .spanComparePrice {
+    color: #00aeac;
+  }
+}
+
+@media screen and (max-width: 736px) and (min-width: 0) {
+  .customSkeletonWidth {
+    width: 100% !important;
+    height: 100%;
+  }
+}

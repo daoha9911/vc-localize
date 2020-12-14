@@ -1,0 +1,135 @@
+@color1: #04afad;
+@color2: #b7dad9;
+@color3: #ed411c;
+@color4: #b7dad9;
+
+@textColor1: #313131;
+@textColor2: #252b42;
+@textColor3: #737373;
+
+.container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  > .title {
+    margin-bottom: 10px;
+    color: @textColor1;
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+  }
+}
+.desc {
+  margin-bottom: 40px;
+  color: @textColor1;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  .item {
+    width: calc(100% / 4);
+    margin-bottom: 30px;
+    padding: 0 15px;
+    &:hover {
+      .photo a {
+        &::after {
+          left: 140%;
+          transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        img {
+          transform: scale(1.15);
+        }
+      }
+    }
+    .photo {
+      a {
+        position: relative;
+        z-index: 1;
+        display: block;
+        overflow: hidden;
+        border-radius: 6px;
+        &::after {
+          position: absolute;
+          top: -70px;
+          left: -300px;
+          z-index: 1;
+          width: 40px;
+          height: 600px;
+          background: rgba(255, 255, 255, 0.5);
+          transform: rotate(35deg);
+          opacity: 0.2;
+          transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+          content: '';
+        }
+        &::before {
+          display: block;
+          padding-bottom: calc(345 / 272 * 100%);
+          content: '';
+        }
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+      }
+    }
+    .title {
+      margin-top: 10px;
+      margin-bottom: 0;
+      a {
+        display: block;
+        color: @textColor1;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: @color1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .list {
+    .item {
+      width: calc(100% / 3);
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    > .title {
+      font-size: 22px;
+    }
+  }
+  .list {
+    margin: 0 -7px;
+    .item {
+      width: calc(100% / 2);
+      margin-bottom: 15px;
+      padding: 0 7px;
+      .title {
+        a {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

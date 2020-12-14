@@ -1,0 +1,225 @@
+.header {
+    background-color: #fff;
+    height: 60px;
+    line-height: 60px;
+  }
+  
+  .header .container {
+    max-width: 1330px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .header .open {
+    display: none;
+  }
+  .header .open span{display: none;}
+  
+  .header .box {
+    width: calc(100% - 215px);
+  }
+  
+  .header .box .close {
+    display: none;
+  }
+  
+  .header .logo {
+    display: inline-block;
+    width: 200px;
+    padding-right: 15px;
+  }
+  
+  .header .logo a {
+    display: inline-block;
+  }
+  
+  .header .logo img {
+    max-height: 55px;
+  }
+  
+  .header .menu {
+    display: inline-block;
+  }
+  
+  .header .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    padding-top: 7px;
+  }
+  
+  .header .menu li {
+    list-style: none;
+    margin: 0 20px;
+    line-height: 1.4;
+  }
+  
+  .header .menu li a {
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  
+  .header .menu li a:hover {
+    color: #04AFAD;
+  }
+  
+  .header .user {
+    float: right;
+    color: #000;
+  }
+  
+  .header .user a {
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  
+  .header .user a:hover {
+    color: #04AFAD;
+  }
+  
+  .header .user .anticon {
+    color: #000;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 991px) {
+    .header .logo {
+      width: 130px;
+    }
+    .header .box {
+      width: calc(100% - 130px);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .header {
+      position: relative;
+    }
+    .header.active .box {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    .header.active::before {
+      visibility: visible;
+      opacity: 1;
+    }
+    .header::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+    }
+    .header .open {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      height: 2px;
+      width: 30px;
+      background: #000;
+      cursor: pointer;
+    }
+    .header .open:before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      left: 0;
+      width: 100%;
+      background: #000;
+      top: -8px;
+    }
+    .header .open:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      left: 0;
+      width: 100%;
+      background: #000;
+      bottom: -8px;
+    }
+    .header .box {
+      position: fixed;
+      width: calc(100% - 100px);
+      right: 0;
+      top: 0;
+      background: #fff;
+      z-index: 2;
+      height: 100vh;
+      -webkit-box-shadow: 0 -7px 10px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 -7px 10px rgba(0, 0, 0, 0.5);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      padding-top: 60px;
+      visibility: hidden;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+    }
+    .header .box .close {
+      display: block;
+      font-size: 20px;
+      color: #000;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .header .box .menu ul {
+      padding-top: 0;
+    }
+    .header .box .menu ul li {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .header .box .user {
+      float: none;
+      width: 100%;
+      line-height: 1;
+      margin-bottom: 30px;
+      margin-left: 19px;
+      margin-right: 20px;
+    }
+  }

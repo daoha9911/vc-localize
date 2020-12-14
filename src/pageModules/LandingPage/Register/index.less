@@ -1,0 +1,87 @@
+@color1: #04afad;
+@color2: #b7dad9;
+@color3: #ed411c;
+@color4: #b7dad9;
+@highlight: #25aba4;
+
+@white: #ffffff;
+@textColor1: #313131;
+@textColor2: #252b42;
+@textColor3: #737373;
+
+.container {
+  padding: 37px 15px 63px 15px;
+  box-sizing: border-box;
+  .wrap {
+    background: linear-gradient(91.02deg, #39bc90 7.68%, #25aba4 99.33%);
+    border-radius: 15px;
+    padding: 61px 100px;
+    box-sizing: border-box;
+    @media screen {
+      @media (max-width: 736px) and (min-width: 0) {
+        padding: 10px 10px;
+      }
+    }
+    @media screen {
+      @media (max-width: 959px) and (min-width: 737px) {
+        padding: 10px 10px;
+      }
+    }
+    .group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen {
+        @media (max-width: 736px) and (min-width: 0) {
+          flex-direction: column;
+        }
+      }
+      @media screen {
+        @media (max-width: 959px) and (min-width: 737px) {
+          flex-direction: column;
+        }
+      }
+      .title {
+        font-family: OpenSans-Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 52px;
+        color: @white;
+        @media screen {
+          @media (max-width: 736px) and (min-width: 0) {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .input {
+        width: 500px;
+        height: 75px;
+        max-width: 100%;
+        background: #ffffff;
+        border-radius: 15px;
+        outline: none;
+        padding: 24px 30px;
+        box-sizing: border-box;
+      }
+      .button {
+        position: absolute;
+        padding: 9px 24px;
+        background: rgba(0, 175, 249, 0.8);
+        border-radius: 10px;
+        height: 45px;
+        font-family: OpenSans-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 27px;
+        color: @white;
+        border: none;
+        top: 15px;
+        right: 20px;
+      }
+    }
+  }
+}

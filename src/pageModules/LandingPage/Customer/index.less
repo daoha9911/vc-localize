@@ -1,0 +1,212 @@
+@color1: #04afad;
+@color2: #b7dad9;
+@color3: #ed411c;
+@color4: #b7dad9;
+@highlight: #25aba4;
+
+@textColor1: #313131;
+@textColor2: #252b42;
+@textColor3: #737373;
+
+.container {
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  @media screen {
+    @media (max-width: 736px) and (min-width: 0) {
+      padding: 20px 15px 20px 15px;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 50px;
+  color: @textColor1;
+  text-align: center;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.131981px;
+  @media screen {
+    @media (max-width: 736px) and (min-width: 0) {
+      line-height: 35px;
+    }
+  }
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen {
+    @media (max-width: 736px) and (min-width: 0) {
+      justify-content: center;
+    }
+  }
+  @media screen {
+    @media (max-width: 959px) and (min-width: 737px) {
+      justify-content: center;
+    }
+  }
+  .detail {
+    margin-top: 50px;
+    width: 600px;
+    max-width: 100%;
+    @media screen {
+      @media (max-width: 736px) and (min-width: 0) {
+        margin-top: 17px;
+      }
+    }
+  }
+  .quote {
+    margin-bottom: 40px;
+    & > h2 {
+      font-family: OpenSans-Bold;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 41px;
+      color: @textColor1;
+    }
+  }
+  .desc {
+    margin-bottom: 50px;
+    & > p {
+      font-family: OpenSans-Regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0.2px;
+      color: @textColor1;
+    }
+  }
+  .customer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 75px;
+    .groupLeft {
+      .name {
+        font-family: OpenSans-Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: 0.1px;
+        color: @highlight;
+        margin-bottom: 14px;
+      }
+      .job {
+        font-family: OpenSans-Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.1px;
+        color: @textColor1;
+      }
+    }
+    .groupRight {
+      display: flex;
+    }
+  }
+  .customers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item {
+      position: relative;
+      margin: 0 18px;
+      .avatar {
+        height: 62px;
+        width: 62px;
+        & > img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      &.active {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 72px;
+          height: 72px;
+          border: 1px solid #00aeac;
+          box-sizing: border-box;
+          left: 50%;
+          border-radius: 50%;
+          transform: translate(-50%, -7%);
+        }
+      }
+    }
+  }
+}
+
+.customSwiper {
+  overflow: inherit !important;
+  :global {
+    .swiper-pagination {
+      bottom: -42px !important;
+    }
+  }
+}
+
+.avatarImage {
+  width: 470px;
+  height: 493px;
+  z-index: 5;
+  position: relative;
+  & > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    object-fit: cover;
+  }
+  &::before {
+    content: '';
+    width: 470px;
+    height: 493px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: transparent;
+    border-radius: 22px;
+    border: 2px solid @highlight;
+    z-index: -1;
+  }
+  @media screen {
+    @media (max-width: 736px) and (min-width: 0) {
+      display: none;
+    }
+  }
+  @media screen {
+    @media (max-width: 959px) and (min-width: 737px) {
+      display: none;
+    }
+  }
+}
+
+.highlight {
+  color: @highlight!important;
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-bottom: 30px;
+  }
+  .title {
+    margin-bottom: 7px;
+    font-size: 22px;
+  }
+  .desc {
+    margin-bottom: 30px;
+  }
+}

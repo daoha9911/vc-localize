@@ -1,0 +1,42 @@
+@media screen and (max-width: 736px) and (min-width: 0) {
+  .customEstateComponent {
+    width: 100%;
+    max-width: 100%;
+  }
+  .estateComponent {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.customEstateComponentEffect:hover {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px 0px;
+}
+
+.estateComponent {
+  width: 352px;
+  max-width: 100%;
+}
+
+.customPagination {
+  :global(.ant-pagination-item-link) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+  }
+  :global(.ant-pagination-prev) {
+    min-width: 12px !important;
+  }
+  :global(.ant-pagination-item-active) {
+    background: #00aeac;
+    border-radius: 4px;
+  }
+  :global(.ant-pagination-item) {
+    margin: 0 5px !important;
+  }
+  :global(.ant-pagination-item-active > a) {
+    color: #fff;
+  }
+}

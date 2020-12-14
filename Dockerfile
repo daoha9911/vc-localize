@@ -1,0 +1,50 @@
+FROM node:alpine as builder
+
+ARG ALGOLIA_APPID
+ENV UMI_APP_ALGOLIA_APPID=${ALGOLIA_APPID}
+
+ARG ALGOLIA_APPKEY
+ENV UMI_APP_ALGOLIA_APPKEY=${ALGOLIA_APPKEY}
+
+ARG BACKEND_HOST
+ENV UMI_APP_BACKEND_HOST=${BACKEND_HOST}
+
+ARG TILE_API
+ENV UMI_APP_TILE_API=${TILE_API}
+
+ARG ADMINISTRATIVE
+ENV UMI_APP_ADMINISTRATIVE=${ADMINISTRATIVE}
+
+ARG AUTH_API
+ENV UMI_APP_AUTH_API=${AUTH_API}
+
+ARG GOOGLE_MAP_API_KEY
+ENV UMI_APP_GOOGLE_MAP_API_KEY=${GOOGLE_MAP_API_KEY}
+
+ARG GEOCODING_API
+ENV UMI_APP_GEOCODING=${GEOCODING_API}
+ENV CI=true
+
+WORKDIR /usr/src/app/
+
+COPY package.json ./
+
+# // --no-cache
+RUN yarn;
+
+COPY . .
+
+RUN ["yarn", "build"]
+
+
+FROM nginx:alpine
+
+ENV APP_LOCATION=/usr/share/nginx/app
+RUN mkdir -p $APP_LOCATION
+
+COPY --from=builder /usr/src/app/dist $APP_LOCATION
+COPY /artifact/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

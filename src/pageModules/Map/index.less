@@ -1,0 +1,292 @@
+.customSubMenu {
+  position: fixed;
+  top: 86px;
+  z-index: 1000;
+  width: 100%;
+  padding: 0 30px;
+  line-height: 88px;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.customContent {
+  box-sizing: border-box;
+  margin-top: 90px;
+}
+
+.contentLeft {
+  position: relative;
+  top: 0;
+  z-index: 1;
+  width: 800px;
+  max-width: 800px;
+  min-height: calc(100vh - 121px);
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.3s ease 0s;
+  will-change: width;
+}
+
+.contentRight {
+  position: fixed;
+  top: 175px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  width: calc(100% - 756px);
+  background-image: linear-gradient(to top, hsla(0, 0%, 100%, 0.47), transparent);
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  will-change: width;
+
+  .loadingIndicator {
+    position: absolute;
+    top: 4rem;
+    right: 1.625rem;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem;
+    background: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
+    p {
+      margin-right: 1rem;
+    }
+  }
+  :global(.mapboxgl-popup-close-button) {
+    padding: 1px 6px;
+  }
+}
+
+.mapMobileControl {
+  position: fixed;
+  bottom: 82px;
+  z-index: 100;
+  display: none;
+  width: 100%;
+  .mapMobileControl_Save {
+    padding: 5px 16px;
+    background: #fff;
+    border-radius: 30px 0 0 30px;
+  }
+  .mapMobileControl_Map {
+    padding: 5px 16px;
+    background: #002c34;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+  }
+  .mapMobileControl_Span {
+    font-family: OpenSans-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.closeMapButton {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 100;
+  .closeMapButton_Svg {
+    padding: 10px;
+    background: rgba(48, 48, 48, 0.4);
+    border-radius: 50%;
+  }
+}
+
+.colorRanges_Wrapper {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 1000;
+  .selectColorRangeContent {
+    box-sizing: border-box;
+    width: 180px;
+    height: 32px;
+    padding: 0 16px;
+    background-color: red;
+    span {
+      color: #fff;
+      font-weight: normal;
+      font-size: 14px;
+      font-family: OpenSans-Regular;
+      font-style: normal;
+      line-height: 22px;
+    }
+  }
+  .priceRange_Content {
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0 25px;
+    background-color: #fff;
+    .span {
+      color: #727c7d;
+      font-weight: normal;
+      font-size: 14px;
+      font-family: OpenSans-Regular;
+      font-style: normal;
+      line-height: 22px;
+    }
+    .priceRange_Component {
+      width: 15px;
+      height: 10px;
+    }
+    & .customColorRange_Num {
+      color: #002c34;
+      font-weight: normal;
+      font-size: 14px;
+      font-family: OpenSans-Regular;
+      font-style: normal;
+      line-height: 22px;
+    }
+  }
+}
+
+.customLocation_Quote {
+  display: none;
+}
+
+@media screen and (max-width: 736px) and (min-width: 0) {
+  .contentLeft {
+    width: 100%;
+  }
+  .contentRight {
+    top: 0;
+    left: 100%;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .customMobileMap {
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+  }
+
+  .customSubMenu {
+    display: none;
+  }
+  .customContent {
+    margin-top: 0;
+  }
+  .mapMobileControl {
+    display: block;
+  }
+
+  .customLocation_Quote {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 100;
+    bottom: 30px;
+    & > h2 {
+      font-family: OpenSans-Bold;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #313131;
+    }
+  }
+}
+
+@media screen and (max-width: 959px) and (min-width: 737px) {
+  .contentLeft {
+    width: 100%;
+  }
+  .customSubMenu {
+    display: none;
+  }
+  .customContent {
+    margin-top: 0;
+  }
+  .contentRight {
+    top: 0;
+    left: 100%;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .customMobileMap {
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+  }
+  .mapMobileControl {
+    display: block;
+  }
+}
+
+.Satellite_Group {
+  position: fixed;
+  bottom: 40px;
+  right: 16px;
+  z-index: 9999;
+  .Satellite_Wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px 0px;
+    border: 1px solid rgb(236, 236, 236);
+    background-color: rgb(248, 248, 248);
+    padding: 2px;
+  }
+  .Satellite_Item {
+    padding: 4px 12px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: OpenSans-Regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 22px;
+    color: #313131;
+    &.active {
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(236, 236, 236);
+      color: rgb(1, 132, 137);
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 960px) {
+  .contentLeft {
+    width: 516px;
+  }
+  .contentRight {
+    width: calc(100% - 516px);
+  }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1280px) {
+  .contentLeft {
+    width: 800px;
+  }
+  .contentRight {
+    width: calc(100% - 800px);
+  }
+}
+
+@media screen and (max-width: 9999px) and (min-width: 1600px) {
+  .contentLeft {
+    width: 800px;
+  }
+  .contentRight {
+    width: calc(100% - 800px);
+  }
+}

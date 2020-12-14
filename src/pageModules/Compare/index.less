@@ -1,0 +1,243 @@
+.CompareDetailItem_Wrapper {
+  box-sizing: border-box;
+  padding: 23px 25px;
+  border-bottom: 1px solid #babec6;
+  &:first-child {
+    border-bottom: 1px solid rgb(1, 132, 137);
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.CompareDetail_Wrapper {
+  &:hover {
+    background: #e9eef5;
+    border-radius: 4px;
+  }
+}
+
+.Compare_Wrapper {
+  box-sizing: border-box;
+  padding: 20px;
+  .Compare_Quote {
+    margin: 32px 0px;
+    h2 {
+      font-family: OpenSans-Bold;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 36px;
+      color: #000000;
+    }
+  }
+  & .CompareDetail_Estate {
+    height: 253px;
+    max-height: 253px;
+    overflow: hidden;
+    .customHeaderspan {
+      font-family: OpenSans-Bold;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      color: #002c34;
+    }
+    .CompareDetail_EstateDelete {
+      position: absolute;
+      top: 32px;
+      z-index: 3;
+      right: 5px;
+      cursor: pointer;
+    }
+  }
+
+  & .CompareDetail_Services {
+    height: 160px;
+    max-height: 160px;
+    overflow: hidden;
+  }
+
+  & .customCell {
+    height: 22px;
+  }
+
+  & .customSpan {
+    font-family: OpenSans-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #002c34;
+  }
+
+  & .customPriceSpan {
+    font-family: OpenSans-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ed411c;
+  }
+}
+
+.Compare_Footer {
+  margin-top: 50px;
+  .customBreadCrumbFooter_wrapper {
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    .customBreadCrumbFooter {
+      box-sizing: border-box;
+      padding: 32px 20px;
+    }
+  }
+}
+
+.Compare_Mobile {
+  display: none;
+  cursor: pointer;
+}
+
+.Compare_Quote_Mobile {
+  display: none;
+  h2 {
+    font-family: OpenSans-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #002c34;
+  }
+}
+
+//custom estateCompare
+.customSwiper {
+  :global(.swiper-pagination-bullet-active) {
+    background: #727c7d !important;
+  }
+  :global(.swiper-pagination-bullet) {
+    background: #fcfcfc;
+    opacity: 1;
+  }
+  border-radius: 4px;
+}
+
+.customInto {
+  top: 8px;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 8px;
+  .introDay {
+    padding: 2px 4px;
+    background: #fff;
+    border-radius: 4px;
+    span {
+      font-family: OpenSans-Regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #002c34;
+    }
+  }
+  .customInto_favor {
+    svg {
+      path {
+        fill: red;
+      }
+    }
+  }
+}
+
+.customSwiperSlide {
+  width: 100% !important;
+}
+
+.customImageSlide {
+  width: 100% !important;
+  height: 164px;
+  max-height: 164px;
+  object-fit: cover;
+}
+
+.spanPrice {
+  color: #ed411c;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  line-height: 22px;
+}
+
+.spanDescription {
+  margin-right: 4px;
+  color: #002c34;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.spanAdress {
+  color: #002c34;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.spanComparePrice {
+  color: #727c7d;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.activeCompare {
+  svg {
+    fill: #00aeac !important;
+  }
+  .spanComparePrice {
+    color: #00aeac;
+  }
+}
+
+@media screen and (max-width: 736px) and (min-width: 0) {
+  .customSkeletonWidth {
+    width: 100% !important;
+    height: 100%;
+  }
+}
+
+//responsive
+@media screen and (max-width: 736px) and (min-width: 0) {
+  .Compare_Web {
+    display: none;
+  }
+  .Compare_Mobile {
+    display: block;
+  }
+  .Compare_Quote {
+    display: none;
+  }
+  .Compare_Quote_Mobile {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 959px) and (min-width: 736px) {
+}
+
+@media screen and (max-width: 1279px) and (min-width: 960px) {
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1280px) {
+}
+
+@media screen and (max-width: 9999px) and (min-width: 1920px) {
+}

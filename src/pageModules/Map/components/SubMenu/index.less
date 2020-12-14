@@ -1,0 +1,58 @@
+.customDisplay {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  height: 88px;
+}
+
+.customIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.customParentPopUp {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  padding: 10px;
+  position: absolute;
+  top: 60px;
+  width: 93%;
+  z-index: 100;
+  &:empty {
+    display: none;
+  }
+}
+
+.customClearSvg {
+  position: absolute;
+  right: 10px;
+}
+
+.searchLocation {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  font-weight: normal;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  border: none !important;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  input {
+    height: 38px !important;
+  }
+  :global(.ant-select-selection-item) {
+    line-height: 38px !important;
+  }
+  :global(.ant-select-selector) {
+    display: flex;
+    align-items: center;
+  }
+}

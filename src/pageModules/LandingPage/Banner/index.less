@@ -1,0 +1,227 @@
+@backgroundcolor: linear-gradient(86.68deg, #e0eafc -12.21%, #cfdef3 89.96%);
+@color1: #04afad;
+@color2: #b7dad9;
+@color3: #ed411c;
+@color4: #b7dad9;
+
+@textColor1: #313131;
+@textColor2: #252b42;
+@textColor3: #737373;
+
+.container {
+  padding-top: 0px;
+  background: @backgroundcolor;
+  border-radius: 0px 0px 0px 303px;
+  padding: 80px 0;
+  box-sizing: border-box;
+  @media screen {
+    @media  (max-width: 736px) and (min-width: 0) {
+      border-radius: 0px 0px 0px 100px;
+      .wrap {
+        justify-content: center;
+      }
+    }
+  }
+  @media screen {
+    @media (max-width: 959px) and (min-width: 737px) {
+      .wrap {
+        justify-content: center;
+      }
+    }
+  }
+}
+.title {
+  font-family: OpenSans-Bold;
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.6;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.197727px;
+  text-align: center;
+
+  color: #212121;
+}
+.link {
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  .link_wrap {
+    width: fit-content;
+    background: linear-gradient(86.68deg, #e0eafc -12.21%, #c7dcfb 89.96%);
+    border-radius: 20px 20px 0 0;
+  }
+  a {
+    display: inline-block;
+    padding: 10px 16px;
+    color: #000;
+    font-family: OpenSans-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    color: #313131;
+    transition: all 0.3s ease-in-out;
+  }
+  a.active {
+    color: #fff;
+    background: linear-gradient(91.02deg, #39bc90 7.68%, #25aba4 99.33%);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+}
+.photo {
+  text-align: center;
+  background-size: cover;
+  background-position: center bottom;
+  width: 709px;
+  height: 615px;
+  img {
+    max-width: 100%;
+  }
+}
+
+.customClearSvg {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding-top: 70px;
+  }
+  .search {
+    :global {
+      .ant-input-group-wrapper {
+        max-width: 500px;
+      }
+    }
+  }
+  .photo {
+    height: 292px;
+    display: none;
+    img {
+      max-width: 510px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .photo {
+    display: none;
+    // height: 150px;
+    // img {
+    //   max-width: calc(100% - 30px);
+    // }
+  }
+  .title {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  .search {
+    :global {
+      .ant-input-group-wrapper {
+        max-width: calc(100% - 30px);
+      }
+    }
+  }
+}
+.searchLocationWrapper {
+  width: 360px;  
+  position: relative;
+  .searchLocation_suggestions {
+    position: absolute;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 8px!important;
+    .searchLocation_suggestionItem {
+      background: #ffffff;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      cursor: pointer;
+      &:hover {
+        background: #e2e8f0;
+      }
+    }
+  }
+  :global(.ant-select-selector) {
+    height: 47px !important;
+    display: flex;
+    align-items: center;
+    border: none !important;
+    :global(.ant-select-selection-placeholder) {
+      line-height: 47px !important;
+    }
+  }
+  input {
+    height: 47px !important;
+    padding: 0 15px !important;
+    border-radius: 8px 0 0 8px!important;
+  }
+  @media screen {
+    @media  (max-width: 736px) and (min-width: 0) {
+      max-width: 60%;
+    }
+  }
+}
+.searchLocation {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 20px;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  line-height: 22px;
+  border: none !important;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  :global {
+    .ant-select-selector {
+      border-radius: 8px 0 0 8px !important;
+    }
+  }
+}
+
+.searchLocation::placeholder {
+  color: #727c7d;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: OpenSans-Regular;
+  font-style: normal;
+  line-height: 22px;
+}
+.customSearchButton {
+  height: 47px;
+  background: linear-gradient(91.02deg, #39bc90 7.68%, #25aba4 99.33%);
+  border-radius: 0 8px 8px 0;
+  border: none !important;
+  padding: 4px 20px;
+  &:hover {
+    background-color: red !important;
+  }
+  &:active {
+    background-color: red;
+  }
+  &:focus {
+    background-color: red;
+  }
+}
+
+.dropdown {
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  &:empty {
+    display: none;
+  }
+}

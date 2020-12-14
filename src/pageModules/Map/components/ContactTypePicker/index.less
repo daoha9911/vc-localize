@@ -1,0 +1,65 @@
+.customChildrenPopup {
+  position: absolute;
+  top: 43px;
+  left: 10px;
+  z-index: 999;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.contactTypePickerPopup {
+  box-sizing: border-box;
+  width: 282px;
+  max-width: 282px;
+  padding: 20px 11px 0 11px;
+  .customRadio {
+    max-height: 188px;
+    :global(.flex) {
+      display: flex !important;
+    }
+    :global(.ant-radio-wrapper) {
+      margin: 5px 0;
+    }
+  }
+}
+
+.customPopupLabelTag {
+  margin-bottom: 20px;
+  color: #002c34;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: OpenSans-Bold;
+  font-style: normal;
+  line-height: 22px;
+  text-align: center;
+}
+
+.popUpButtonAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 17px 11px;
+  border-top: 1px solid #e8e8e8;
+  .popUpButtonActionSpan {
+    color: #002c34;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: OpenSans-Bold;
+    font-style: normal;
+    line-height: 22px;
+    cursor: pointer;
+  }
+  .popUpButtonActionButton {
+    padding: 5px 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: OpenSans-Bold;
+    font-style: normal;
+    line-height: 22px;
+    background: #00aeac;
+    border-radius: 4px;
+  }
+}

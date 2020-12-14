@@ -1,0 +1,36 @@
+@color1: #04afad;
+@color2: #b7dad9;
+@color3: #ed411c;
+
+@textColor1: #313131;
+@textColor2: #252b42;
+@textColor3: #737373;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: @textColor1;
+    border-radius: 6px;
+  }
+}
+
+:global {
+  .ant-layout {
+    min-height: 0;
+    background-color: #fff;
+  }
+}
